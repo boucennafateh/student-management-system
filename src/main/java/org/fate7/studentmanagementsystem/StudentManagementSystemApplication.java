@@ -24,8 +24,17 @@ public class StudentManagementSystemApplication {
     public CommandLineRunner loadData(StudentRepository studentRepository){
         return args -> {
             System.out.println("loading table ...");
+
             Student student = new Student("Fateh", "Boucenna", "fboucenna@gmail.com");
             studentRepository.save(student);
+
+            student = new Student("Roufaida", "Laidi", "roufaida@gmail.com");
+            studentRepository.save(student);
+
+            student = new Student("Adel", "Dabah", "adel@gmail.com");
+            studentRepository.save(student);
+
+
         };
 
     }
